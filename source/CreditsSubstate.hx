@@ -237,7 +237,9 @@ class CreditsSubstate extends MusicBeatSubstate
 		bg.color = getCurrentBGColor();
 		intendedColor = bg.color;
 		changeSelection();
-
+		  #if android
+                addVirtualPad(UP_DOWN, A_B);
+                #end
 		new FlxTimer().start(0.1, function (f:FlxTimer){
 			quitting=false;
 		});
